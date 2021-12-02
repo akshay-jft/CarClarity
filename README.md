@@ -18,7 +18,8 @@ npm run build
 ### Total Time Spent - 4 Hours
 
 ### Assumption Made 
-- In the header section user is not going to manipulate the text from HTML.\
+- In the header section user is not going to manipulate the text from HTML.
+- Verbose input from the user with the intension to disrupt input field is ignored.
 
 ### Any Queries that need resolution - No 
 
