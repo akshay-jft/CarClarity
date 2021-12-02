@@ -15,5 +15,18 @@ npm run serve
 npm run build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Total Time Spent - 4 Hours
+
+### Assumption Made 
+- In the header section user is not going to manipulate the text from HTML.\
+
+### Any Queries that need resolution - No 
+
+### Scope of Improvement 
+
+- Responseive design for mobile.
+- Implementing use of brackets for expression evaluation.
+
+### Any deviation from requirements
+
+- No
