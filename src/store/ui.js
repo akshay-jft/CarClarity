@@ -12,8 +12,10 @@ const actions = {
       state.lastType = 'number'
     } else {
       switch(value){
-        case '.' : 
-          commit('UPDATE_FIELD_INPUT', '.');
+        case '.' :
+          if(state.field_input.charAt(state.field_input.length-1) != '.'){
+            commit('UPDATE_FIELD_INPUT', '.');
+          } 
           break;
         case '+' :
           if(state.lastType === 'number'){
@@ -22,6 +24,7 @@ const actions = {
           }
           break;
         case '-' :
+          
           if(state.lastType === 'number'){
             commit('UPDATE_FIELD_INPUT', ' - ');
             state.lastType = 'operator'
@@ -29,7 +32,7 @@ const actions = {
           break; 
         case 'x' :
           if(state.lastType === 'number'){
-            commit('UPDATE_FIELD_INPUT', ' x ');
+            commit('UPDATE_FIELD_INPUT', ' * ');
             state.lastType = 'operator'
           }
           break;
