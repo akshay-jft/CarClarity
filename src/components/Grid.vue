@@ -8,7 +8,7 @@
       <span class="calc-button">(</span>
       <span class="calc-button">)</span>
       <span class="calc-button">%</span>
-      <span class="calc-button" @click="resetField">CE</span>
+      <span class="calc-button" @click="resetField">{{ getClearButtonVal }}</span>
     </div>
     <div class="grid">
       <span class="calc-button" >Inv</span>
@@ -65,7 +65,7 @@ export default {
     }
   },
   computed : {
-    ...mapGetters(['getFieldInput'])
+    ...mapGetters(['getFieldInput', 'getClearButtonVal'])
   }
 }
 </script>
