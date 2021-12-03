@@ -44,7 +44,9 @@ const actions = {
     } 
   },
   resetInputField({ commit }){
-    commit('RESET_FIELD');
+    if(state.field_input !== ''){
+      commit('RESET_FIELD');
+    }
   }
 }
 
@@ -53,11 +55,12 @@ const mutations ={
     state.field_input = state.field_input + "" +payload;
   },
   'RESET_FIELD'(state){
+    state.field_answer = `Ans = ${state.field_input}`;
     state.field_input = '';
-    state.field_answer = '';
   },
   'UPDATE_RESULT'(state, value){
-    state.field_answer = value;
+    state.field_answer = state.field_input;
+    state.field_input = value;
   }
 }
 

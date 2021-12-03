@@ -2,8 +2,8 @@
   <div class="header-body">
     <span><v-icon size="25px">mdi-history</v-icon></span>
     <div class="answer-section">
-      <span>Ans = {{ getFieldAnswer }}</span>
-      <h2>{{ getFieldInput }}</h2>
+      <span>{{ getFieldAnswer }}</span>
+      <h2>{{ getHeaderValue }}</h2>
     </div>
   </div>
 </template>
@@ -12,7 +12,13 @@
 import { mapGetters } from 'vuex'
 export default {
   computed : {
-    ...mapGetters(['getFieldInput', 'getFieldAnswer'])
+    ...mapGetters(['getFieldInput', 'getFieldAnswer']),
+    getHeaderValue(){
+      if(this.getFieldInput === ''){
+        return '0'
+      } 
+      return this.getFieldInput
+    }
   }
 }
 </script>
