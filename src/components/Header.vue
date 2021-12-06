@@ -34,14 +34,15 @@ export default {
   align-items: baseline;
 }
 .header-body:hover{
-  border-top-color: #202124;;
+  border-top-color: #70757a;;
 }
 .answer-section{
   text-align: right;
 }
 .answer-section h2{
-  font-size: 22px;
+  font-size: 30px;
   font-weight: 400;
+  line-height: 2.3rem;
 }
 .answer-section span {
   color: #70757a;
